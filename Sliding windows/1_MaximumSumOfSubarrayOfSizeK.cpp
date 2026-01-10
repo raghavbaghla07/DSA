@@ -1,4 +1,4 @@
-// Leetcode -53: Maximum Subarray
+// Maximum sum of Subarray of size k
 
 // #include <iostream>
 // #include <climits>
