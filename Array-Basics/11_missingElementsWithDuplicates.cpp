@@ -4,22 +4,19 @@ using namespace std;
 void missingElements(vector<int> &nums)
 {
     int n = nums.size();
-    vector<int> ans;
-
+    vector<int> missing;
     for (int i = 0; i < n; i++)
     {
         int idx = abs(nums[i]) - 1;
         if (nums[idx] > 0)
             nums[idx] = -nums[idx];
     }
-
-    // cout << "printing the missing elements" << endl;
-
-    for (int i = 0; i < nums.size(); i++)
+    for (int i = 0; i < n; i++)
         if (nums[i] > 0)
-            ans.push_back(i + 1);
-    for (int i = 0; i < ans.size(); i++)
-        cout << ans[i] << " ";
+            missing.push_back(i + 1);
+    cout << "printing the missing elements" << endl;
+    for (int i = 0; i < missing.size(); i++)
+        cout << missing[i] << " ";
 }
 int main()
 {
